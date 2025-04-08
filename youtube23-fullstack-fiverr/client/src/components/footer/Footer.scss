@@ -11,9 +11,12 @@
 
   .container {
     width: 1400px;
+
     .top {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap; // Allow wrapping for smaller screens
+
       .item {
         display: flex;
         flex-direction: column;
@@ -33,10 +36,12 @@
       height: 0;
       border: 1px solid #ebe9e9;
     }
+
     .bottom {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap; // Allow wrapping for smaller screens
 
       .left {
         width: max-content;
@@ -49,11 +54,13 @@
           white-space: nowrap;
         }
       }
+
       .right {
         width: max-content;
         display: flex;
         align-items: center;
         gap: 30px;
+        flex-wrap: wrap; // Allow wrapping for smaller screens
 
         .social {
           display: flex;
@@ -65,6 +72,47 @@
           align-items: center;
           gap: 10px;
         }
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      padding: 0 20px; // Add padding for smaller screens
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      .top {
+        flex-direction: column; // Stack items vertically
+        align-items: center;
+        gap: 30px;
+      }
+
+      .bottom {
+        flex-direction: column; // Stack items vertically
+        align-items: center;
+        gap: 20px;
+
+        .left,
+        .right {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      .top .item h2 {
+        font-size: 14px; // Reduce font size for smaller screens
+      }
+
+      .bottom .left span {
+        font-size: 12px; // Reduce font size for smaller screens
       }
     }
   }

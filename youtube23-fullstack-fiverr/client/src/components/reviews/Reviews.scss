@@ -21,6 +21,7 @@
         padding: 20px;
         align-self: flex-end;
       }
+
       button {
         align-self: flex-end;
         width: 100px;
@@ -37,5 +38,48 @@
     height: 0;
     border: 0.5px solid lightgray;
     margin: 50px 0px;
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    .add {
+      .addForm {
+        input {
+          padding: 15px;
+        }
+
+        select {
+          width: 100%;
+          padding: 15px;
+          align-self: stretch;
+        }
+
+        button {
+          width: 100%;
+          padding: 15px;
+          align-self: stretch;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .add {
+      .addForm {
+        input {
+          padding: 10px;
+        }
+
+        select {
+          width: 100%;
+          padding: 10px;
+        }
+
+        button {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+    }
   }
 }

@@ -37,12 +37,12 @@
           padding: 20px;
         }
 
-        .images{
+        .images {
           display: flex;
           align-items: center;
           gap: 20px;
 
-          .imagesInputs{
+          .imagesInputs {
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -59,20 +59,20 @@
           cursor: pointer;
         }
 
-        .add{
+        .add {
           display: flex;
           justify-content: space-between;
 
-          input{
+          input {
             width: 80%;
           }
         }
 
-        .addedFeatures{
+        .addedFeatures {
           display: flex;
           gap: 20px;
 
-          button{
+          button {
             height: 30px;
             font-size: 12px;
             font-weight: 400;
@@ -84,6 +84,96 @@
             gap: 20px;
           }
         }
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      padding: 30px 20px;
+    }
+
+    .sections {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .info,
+    .details {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .sections {
+      gap: 30px;
+    }
+
+    .info,
+    .details {
+      input,
+      select,
+      textarea {
+        padding: 15px;
+      }
+
+      button {
+        padding: 15px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 20px;
+    }
+
+    .sections {
+      gap: 20px;
+    }
+
+    .info,
+    .details {
+      input,
+      select,
+      textarea {
+        padding: 10px;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+    .add {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    .addedFeatures {
+      flex-direction: column;
+      gap: 10px;
+
+      button {
+        font-size: 10px;
+        height: 25px;
       }
     }
   }

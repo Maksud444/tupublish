@@ -1,7 +1,6 @@
 .gigCard {
   width: 324px;
   height: 450px;
-  // border: 1px solid rgb(237, 236, 236);
   border: 1px solid rgb(228, 228, 228);
   margin-bottom: 40px;
 
@@ -89,6 +88,79 @@
       sup {
         font-size: 12px;
         font-weight: 300;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+
+    .info {
+      padding: 10px;
+
+      .user {
+        img {
+          width: 22px;
+          height: 22px;
+        }
+      }
+
+      .star {
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .detail {
+      padding: 10px;
+
+      .price {
+        span {
+          font-size: 10px;
+        }
+
+        h2 {
+          font-size: 16px;
+        }
+
+        sup {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .info {
+      gap: 10px;
+
+      .user {
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .star {
+        img {
+          height: 12px;
+          width: 12px;
+        }
+
+        span {
+          font-size: 10px;
+        }
+      }
+    }
+
+    .detail {
+      .price {
+        h2 {
+          font-size: 14px;
+        }
       }
     }
   }

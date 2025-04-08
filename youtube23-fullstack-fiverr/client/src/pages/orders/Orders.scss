@@ -30,8 +30,7 @@
           text-align: left;
         }
         td {
-          
-          sup{
+          sup {
             font-size: 12px;
           }
 
@@ -48,6 +47,76 @@
         }
         &:nth-child(even) {
           background-color: #0000000f;
+        }
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      padding: 30px 10px;
+
+      .title {
+        flex-direction: column;
+        align-items: flex-start;
+
+        button {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px 5px;
+
+      table {
+        font-size: 14px;
+
+        tr {
+          td {
+            .image {
+              width: 40px;
+              height: 20px;
+            }
+
+            .message {
+              width: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+
+      .title {
+        button {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      table {
+        font-size: 12px;
+
+        tr {
+          td {
+            .image {
+              width: 30px;
+              height: 15px;
+            }
+
+            .message {
+              width: 15px;
+            }
+          }
         }
       }
     }

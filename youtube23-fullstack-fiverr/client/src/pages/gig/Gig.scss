@@ -157,8 +157,6 @@
           }
         }
       }
-
-      
     }
 
     .right {
@@ -179,16 +177,16 @@
         align-items: center;
         justify-content: space-between;
 
-        h2{
+        h2 {
           font-weight: 300;
         }
 
-        h3{
+        h3 {
           font-weight: 500;
         }
       }
 
-      p{
+      p {
         color: gray;
         margin: 10px 0px;
       }
@@ -210,8 +208,8 @@
         }
       }
 
-      .features{
-        .item{
+      .features {
+        .item {
           display: flex;
           align-items: center;
           gap: 10px;
@@ -219,13 +217,13 @@
           color: gray;
           margin-bottom: 5px;
 
-          img{
+          img {
             width: 14px;
           }
         }
       }
 
-      button{
+      button {
         background-color: #000000;
         padding: 10px;
         color: white;
@@ -233,6 +231,70 @@
         border: none;
         font-size: 18px;
         cursor: pointer;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1200px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .left {
+      .slider img {
+        max-height: 400px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    .left {
+      .slider img {
+        max-height: 300px;
+      }
+
+      .seller .user img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    .right {
+      position: static;
+      max-height: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      padding: 10px;
+    }
+
+    .left {
+      .slider img {
+        max-height: 200px;
+      }
+
+      .seller .user img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    .right {
+      padding: 10px;
+
+      button {
+        font-size: 14px;
+        padding: 8px;
       }
     }
   }

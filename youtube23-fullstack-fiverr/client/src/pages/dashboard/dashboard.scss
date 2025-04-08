@@ -17,7 +17,8 @@
       font-weight: bold;
     }
 
-    input, textarea {
+    input,
+    textarea {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -47,6 +48,67 @@
       border-radius: 5px;
       cursor: pointer;
       margin-right: 10px; /* Add spacing between buttons horizontally */
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 768px) {
+    padding: 15px;
+
+    h1 {
+      font-size: 24px;
+    }
+
+    form {
+      gap: 8px;
+
+      input,
+      textarea {
+        padding: 8px;
+      }
+
+      button {
+        padding: 8px;
+        font-size: 14px;
+      }
+    }
+
+    div {
+      button {
+        padding: 8px;
+        font-size: 14px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 10px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    form {
+      gap: 6px;
+
+      input,
+      textarea {
+        padding: 6px;
+      }
+
+      button {
+        padding: 6px;
+        font-size: 12px;
+      }
+    }
+
+    div {
+      button {
+        padding: 6px;
+        font-size: 12px;
+        margin-right: 6px;
+      }
     }
   }
 }

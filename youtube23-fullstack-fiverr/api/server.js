@@ -26,10 +26,17 @@ const connect = async () => {
 };
 
 // Middleware to parse JSON
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "https://ubiquitous-yeot-556f20.netlify.app", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 // Define routes
+app.get("/api/test", (req, res) => {
+  res.send("Hello, this is a test route!");
+});
+app.get("/", (req, res) => {
+  res.send("Hello!, The server is running");
+});
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/gigs", gigRoute);
